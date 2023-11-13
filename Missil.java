@@ -10,7 +10,7 @@ public class Missil extends Sprite {
 		initMissil();
 	}
 	private void initMissil() {
-		carregarImagem("C:\\Users\\emanu\\pooa_av2\\imagens\\missil.png");
+		carregarImagem("C:\\Users\\emanu\\pooa_av2\\imagens\\missil.png", 10, 10);
 		getImageDimensions();
 	}
 	public void move() {

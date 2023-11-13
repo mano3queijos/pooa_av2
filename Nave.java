@@ -15,7 +15,7 @@ public class Nave extends Sprite {
 
 	private void initNave() {
 		missiles = new ArrayList<Missil>();
-		carregarImagem("imagens/nave.png");
+		carregarImagem("imagens/nave.png", 100, 100 );
 		getImageDimensions();
 	}
 

@@ -2,7 +2,10 @@ package br.ucsal.jogo;
 
 import java.awt.Image;
 import java.awt.Rectangle;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class Sprite {
@@ -20,9 +23,20 @@ public class Sprite {
 		visible = true;
 	}
 
-	protected void carregarImagem(String imageName) {
-		ImageIcon imageIcon = new ImageIcon(imageName);
-		image = imageIcon.getImage();
+	protected void carregarImagem(String imageName, int width, int height) {
+		try{
+			Image imagem  = ImageIO.read(new File(imageName));
+
+
+			Image imagemRedimensionada = imagem.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+			ImageIcon novaImagem = new ImageIcon(imagemRedimensionada);
+			image = novaImagem.getImage();
+
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
+
 	}
 
 	protected void getImageDimensions() {
