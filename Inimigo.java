@@ -9,7 +9,7 @@ public class Inimigo extends Sprite {
 	}
 
 	private void initInimigo() {
-		carregarImagem("alien.png");
+		carregarImagem("C:\\Users\\emanu\\pooa_av2\\imagens\\alien.png");
 		getImageDimensions();
 	}
 
